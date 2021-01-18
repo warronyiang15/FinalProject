@@ -1,0 +1,224 @@
+class Pacman {
+
+	field int x,y;
+	field int size;
+	field int a,b,c,d;
+	field char key;
+	field boolean powerUps;
+	field int times;
+
+	constructor Pacman new(int Ax, int Ay, int Asize){
+		let x = Ax;
+		let y = Ay;
+		let size = Asize;
+		let key = 130;
+		let powerUps = false;
+		let times = 0;
+		//do drawRight();
+		//do move();
+		return this;
+	}
+
+	method int get_x(){
+		return x;
+	}
+
+	method int get_y(){
+		return y;
+	}
+
+	method int get_size(){
+		return size;
+	}
+
+    method void drawRight() {
+		do Screen.setColor(true);
+		do Screen.drawCircle(x,y,size);
+		do Screen.setColor(false);
+		do Screen.drawLine(x,y,x+size,y);
+		let a = size - 1;
+		let b  = x + 1;
+		let c = y + 1;
+		let d = y - 1;
+		while (a > 0) {
+			do Screen.drawLine(b,c,x + size,c);
+			do Screen.drawLine(b,d,x + size,d);
+			let a = a - 1;
+			let b = b + 1;
+			let c = c + 1;
+			let d = d - 1;
+	}
+	return;
+}
+	method void drawLeft() {
+		do Screen.setColor(true);
+		do Screen.drawCircle(x,y,size);
+		do Screen.setColor(false);
+		do Screen.drawLine(x,y,x - size,y);
+		let a = size - 1;
+		let b = x - 1;
+		let c = y + 1;
+		let d = y - 1;
+		while (a > 0) {
+			do Screen.drawLine(b,c,x - size,c);
+			do Screen.drawLine(b,d,x - size,d);
+			let a = a - 1;
+			let b = b - 1;
+			let c = c + 1;
+			let d = d - 1;
+		}
+		return;
+	}
+	method void drawUp() {
+		do Screen.setColor(true);
+		do Screen.drawCircle(x,y,size);
+		do Screen.setColor(false);
+		do Screen.drawLine(x,y,x,y - size);
+		let a = size - 1;
+		let b = y - 1;
+		let c = x + 1;
+		let d = x - 1;
+		while (a > 0) {
+			do Screen.drawLine(c,b,c,y - size);
+			do Screen.drawLine(d,b,d,y - size);
+			let a = a - 1;
+			let b = b - 1;
+			let c = c + 1;
+			let d = d - 1;
+		}
+		return;
+	}
+	method void drawDown() {
+		do Screen.setColor(true);
+		do Screen.drawCircle(x,y,size);
+		do Screen.setColor(false);
+		do Screen.drawLine(x,y,x,y + size);
+		let a = size - 1;
+		let b = y + 1;
+		let c = x + 1;
+		let d = x - 1;
+		while (a > 0) {
+			do Screen.drawLine(c,b,c,y + size);
+			do Screen.drawLine(d,b,d,y + size);
+			let a = a - 1;
+			let b = b + 1;
+			let c = c + 1;
+			let d = d - 1;
+		}
+		return;
+	}
+	method void moveRight() {
+		if( ((x + 5) > 505) & (y > 114) & (y < 141) )
+		{
+			do Screen.setColor(false);
+			do Screen.drawCircle(x,y,size);
+			let x = 20;
+			do drawRight();
+			return;
+		}
+		if (x < (511 - (size + 4))) {
+			do Screen.setColor(false);
+			do Screen.drawCircle(x,y,size);
+			let x = x + 5;
+			do drawRight();
+		}
+		return;
+	}
+	method void moveLeft() {
+		
+		if( ((x - 5) < 10) & (y > 114) & (y < 141) )
+		{
+			do Screen.setColor(false);
+			do Screen.drawCircle(x,y,size);
+			let x = 512 - 20;
+			do drawLeft();
+			return;
+		}
+		if (x > (size + 4)) {
+			do Screen.setColor(false);
+			do Screen.drawCircle(x,y,size);
+			let x = x - 5;
+			do drawLeft();
+		}
+		return;
+	}
+	method void moveUp() {
+		if (y > (size + 4)) {
+			do Screen.setColor(false);
+			do Screen.drawCircle(x,y,size);
+			let y = y - 5;
+			do drawUp();
+		}
+		return;
+	}
+	method void moveDown() {
+		if (y < (255-(size+4))) {
+			do Screen.setColor(false);
+			do Screen.drawCircle(x,y,size);
+			let y = y + 5;
+			do drawDown();
+		}
+		return;
+	}
+	method void move(Terrain map) {
+		if(powerUps){
+			let size = 10;
+			let times = times - 1;
+			if(times < 0)
+			{
+				do Screen.setColor(false);
+				do Screen.drawCircle(x,y,size);
+				do Screen.setColor(true);
+				let powerUps = false;
+				let times = 0;
+				let size = 5;
+				do Screen.drawCircle(x,y,size);
+			}
+		}
+		//while (true) {
+			if (~(Keyboard.keyPressed() = 0)) {
+				let key = Keyboard.keyPressed();
+			}
+			if (key = 131 & (map.collision(x,y-11)) & (map.collision(x - 5,y-11)) & (map.collision(x+5,y-11))) {do moveUp();}
+			if (key = 133 & (map.collision(x,y+11)) & (map.collision(x + 5,y+11)) & (map.collision(x-5,y+11))) {do moveDown();}
+			if (key = 130 & (map.collision(x-11,y)) & (map.collision(x - 11,y + 5)) & (map.collision(x - 11,y - 5))) {do moveLeft();}
+			if (key = 132 & (map.collision(x+11,y)) & (map.collision(x + 11,y + 5)) & (map.collision(x + 11,y - 5))) {do moveRight();}
+		//} 
+		return;
+	} 
+	method void moveEnd() {
+
+		//while (true) {
+			if (~(Keyboard.keyPressed() = 0)) {
+				let key = Keyboard.keyPressed();
+			}
+			if (key = 131 ) {do moveUp();}
+			if (key = 133 ) {do moveDown();}
+			if (key = 130 ) {do moveLeft();}
+			if (key = 132 ) {do moveRight();}
+		//} 
+		return;
+	} 
+
+	method void checkEat(Point p){
+		do p.eaten(x,y,1,this);
+		do p.eaten(x+3,y+3,1,this);
+		do p.eaten(x-3,y-3,1,this);
+		do p.eaten(x+3,y-3,1,this);
+		do p.eaten(x-3,y+3,1,this);
+		return;
+	}
+	
+	method boolean getPower(){
+		return powerUps;
+	}
+
+	method void setPowerUps(){
+		let powerUps = true;
+		let times = 10;
+		return;
+	}
+
+
+    
+}

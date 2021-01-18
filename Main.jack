@@ -1,0 +1,11 @@
+class Main{
+    function void main(){
+        //var Ghost t;
+        
+        var Game test;
+        let test = Game.new();
+        do test.Game();
+        
+        return;
+    }
+}

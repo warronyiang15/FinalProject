@@ -1,0 +1,898 @@
+function Ghost.new 0
+push constant 5
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push constant 0
+pop this 2
+push constant 17195
+call Random.new 1
+pop this 3
+push constant 0
+not
+pop this 4
+push pointer 0
+return
+function Ghost.get_x 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Ghost.get_y 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Ghost.draw 0
+push argument 0
+pop pointer 0
+push this 0
+push this 1
+push this 0
+push constant 12
+add
+push this 1
+push constant 12
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 3
+add
+push this 1
+push constant 3
+add
+push constant 1
+call Screen.drawCircle 3
+pop temp 0
+push this 0
+push constant 9
+add
+push this 1
+push constant 3
+add
+push constant 1
+call Screen.drawCircle 3
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+return
+function Ghost.moveright 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 5
+add
+push constant 512
+lt
+push argument 1
+push this 0
+push constant 12
+add
+push constant 5
+add
+push this 1
+call Terrain.collision 3
+and
+push this 2
+push constant 0
+eq
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Ghost.draw 1
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 5
+add
+pop this 0
+push pointer 0
+call Ghost.draw 1
+pop temp 0
+push constant 0
+not
+return
+label IF_FALSE0
+push constant 0
+return
+function Ghost.moveleft 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 5
+sub
+push constant 1
+neg
+gt
+push argument 1
+push this 0
+push constant 12
+sub
+push constant 5
+sub
+push this 1
+call Terrain.collision 3
+and
+push argument 1
+push this 0
+push constant 5
+sub
+push this 1
+call Terrain.collision 3
+and
+push this 2
+push constant 1
+eq
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Ghost.draw 1
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 5
+sub
+pop this 0
+push pointer 0
+call Ghost.draw 1
+pop temp 0
+push constant 0
+not
+return
+label IF_FALSE0
+push constant 0
+return
+function Ghost.moveup 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 5
+sub
+push constant 1
+neg
+gt
+push argument 1
+push this 0
+push this 1
+push constant 5
+sub
+call Terrain.collision 3
+and
+push argument 1
+push this 0
+push constant 12
+add
+push this 1
+push constant 5
+sub
+call Terrain.collision 3
+and
+push argument 1
+push this 0
+push constant 12
+add
+push this 1
+push constant 8
+sub
+call Terrain.collision 3
+and
+push argument 1
+push this 0
+push this 1
+push constant 8
+sub
+call Terrain.collision 3
+and
+push this 2
+push constant 3
+eq
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Ghost.draw 1
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 1
+push constant 5
+sub
+pop this 1
+push pointer 0
+call Ghost.draw 1
+pop temp 0
+push constant 0
+not
+return
+label IF_FALSE0
+push constant 0
+return
+function Ghost.movedown 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 5
+add
+push constant 256
+lt
+push argument 1
+push this 0
+push constant 5
+add
+push this 1
+push constant 13
+add
+push constant 5
+add
+call Terrain.collision 3
+and
+push argument 1
+push this 0
+push constant 5
+add
+push this 1
+push constant 12
+add
+call Terrain.collision 3
+and
+push argument 1
+push this 0
+push constant 5
+add
+push this 1
+push constant 8
+add
+push constant 5
+add
+call Terrain.collision 3
+and
+push this 2
+push constant 2
+eq
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Ghost.draw 1
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 1
+push constant 5
+add
+pop this 1
+push pointer 0
+call Ghost.draw 1
+pop temp 0
+push constant 0
+not
+return
+label IF_FALSE0
+push constant 0
+return
+function Ghost.move 0
+push argument 0
+pop pointer 0
+push this 2
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+push argument 1
+call Ghost.moveright 2
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push argument 2
+push this 0
+push constant 5
+add
+push constant 12
+add
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push argument 2
+push this 0
+push constant 5
+add
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push constant 0
+return
+goto IF_END1
+label IF_FALSE1
+push argument 2
+push this 0
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push pointer 0
+call Ghost.change 1
+pop temp 0
+push argument 2
+push this 0
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push constant 0
+return
+label IF_END1
+label IF_FALSE0
+push this 2
+push constant 1
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push pointer 0
+push argument 1
+call Ghost.moveleft 2
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push argument 2
+push this 0
+push constant 5
+sub
+push constant 12
+sub
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push argument 2
+push this 0
+push constant 5
+sub
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push constant 0
+return
+goto IF_END3
+label IF_FALSE3
+push argument 2
+push this 0
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push pointer 0
+call Ghost.change 1
+pop temp 0
+push argument 2
+push this 0
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push constant 0
+return
+label IF_END3
+label IF_FALSE2
+push this 2
+push constant 2
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push pointer 0
+push argument 1
+call Ghost.movedown 2
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push argument 2
+push this 0
+push this 1
+push constant 5
+add
+push constant 12
+add
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push argument 2
+push this 0
+push this 1
+push constant 5
+add
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push constant 0
+return
+goto IF_END5
+label IF_FALSE5
+push argument 2
+push this 0
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push pointer 0
+call Ghost.change 1
+pop temp 0
+push argument 2
+push this 0
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push constant 0
+return
+label IF_END5
+label IF_FALSE4
+push this 2
+push constant 3
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push pointer 0
+push argument 1
+call Ghost.moveup 2
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push argument 2
+push this 0
+push this 1
+push constant 5
+sub
+push constant 12
+sub
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push argument 2
+push this 0
+push this 1
+push constant 5
+sub
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push constant 0
+return
+goto IF_END7
+label IF_FALSE7
+push argument 2
+push this 0
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push pointer 0
+call Ghost.change 1
+pop temp 0
+push argument 2
+push this 0
+push this 1
+push constant 2
+push argument 3
+call Point.eaten 5
+pop temp 0
+push constant 0
+return
+label IF_END7
+label IF_FALSE6
+push constant 0
+return
+function Ghost.eat 0
+push argument 0
+pop pointer 0
+push argument 1
+call Pacman.getPower 1
+not
+push argument 1
+call Pacman.get_x 1
+push this 0
+push constant 5
+sub
+gt
+and
+push argument 1
+call Pacman.get_x 1
+push this 0
+push constant 5
+add
+lt
+and
+push argument 1
+call Pacman.get_y 1
+push this 1
+push constant 5
+sub
+gt
+and
+push argument 1
+call Pacman.get_y 1
+push this 1
+push constant 5
+add
+lt
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push argument 1
+call Pacman.getPower 1
+push argument 1
+call Pacman.get_x 1
+push this 0
+push constant 5
+sub
+gt
+and
+push argument 1
+call Pacman.get_x 1
+push this 0
+push constant 5
+add
+lt
+and
+push argument 1
+call Pacman.get_y 1
+push this 1
+push constant 5
+sub
+gt
+and
+push argument 1
+call Pacman.get_y 1
+push this 1
+push constant 5
+add
+lt
+and
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+pop this 4
+push constant 0
+return
+label IF_FALSE1
+push constant 0
+return
+function Ghost.end 0
+push argument 0
+pop pointer 0
+push this 0
+push argument 1
+call Pacman.get_x 1
+push argument 1
+call Pacman.get_size 1
+add
+lt
+push this 0
+push argument 1
+call Pacman.get_x 1
+gt
+and
+push this 1
+push argument 1
+call Pacman.get_y 1
+push argument 1
+call Pacman.get_size 1
+add
+lt
+and
+push this 1
+push argument 1
+call Pacman.get_y 1
+gt
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push constant 0
+return
+function Ghost.change 0
+push argument 0
+pop pointer 0
+push this 3
+push constant 3
+call Random.randRange 2
+pop this 2
+push this 3
+push constant 10
+call Random.addCallTime 2
+pop temp 0
+push constant 0
+return
+function Ghost.checkEat 0
+push argument 0
+pop pointer 0
+push argument 1
+push this 0
+push this 1
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 1
+sub
+push this 1
+push constant 1
+add
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 1
+sub
+push this 1
+push constant 1
+sub
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 2
+sub
+push this 1
+push constant 2
+sub
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 2
+sub
+push this 1
+push constant 15
+add
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 12
+add
+push this 1
+push constant 12
+add
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 7
+add
+push this 1
+push constant 7
+add
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 3
+add
+push this 1
+push constant 3
+add
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 12
+add
+push this 1
+push constant 12
+sub
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 7
+add
+push this 1
+push constant 7
+sub
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 3
+add
+push this 1
+push constant 3
+sub
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 12
+sub
+push this 1
+push constant 12
+add
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 7
+sub
+push this 1
+push constant 7
+add
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 3
+sub
+push this 1
+push constant 3
+add
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 12
+sub
+push this 1
+push constant 12
+sub
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 7
+sub
+push this 1
+push constant 7
+sub
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 3
+sub
+push this 1
+push constant 3
+sub
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 12
+sub
+push this 1
+push constant 6
+add
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push constant 12
+add
+push this 1
+push constant 6
+add
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push argument 1
+push this 0
+push this 1
+push constant 6
+add
+push constant 2
+push argument 2
+call Point.eaten 5
+pop temp 0
+push constant 0
+return
+function Ghost.getExists 0
+push argument 0
+pop pointer 0
+push this 4
+return

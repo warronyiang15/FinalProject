@@ -1,0 +1,233 @@
+class Ghost{
+
+    field int x,y,dir;
+    field Random ran;
+    field boolean exists;
+
+    constructor Ghost new (int a,int b)
+    {
+        let x = a;
+        let y = b;   
+        let dir = 0;
+        let ran = Random.new(17195);
+        let exists = true;
+        return this;
+    }
+    method int get_x()
+    {
+        return x;
+    }
+    method int get_y()
+    {
+        return y;
+    }
+    method void draw()
+    {
+        /*
+        //draw horizontal
+        do Screen.drawLine(x,y,x+12,y);
+        //draw leftside
+        do Screen.drawLine(x,y,x,y+12);
+        //draw rightside
+        do Screen.drawLine(x+12,y,x+12,y+12);
+        //draw triangle
+        do Screen.drawLine(x+1,y+12,x+3,y+12-5);
+        do Screen.drawLine(x+3,y+12-5,x+7,y+12);
+        do Screen.drawLine(x+7,y+12,x+10,y+12-5);
+        do Screen.drawLine(x+10,y+12-5,x+12,y+12);
+        //draw eyes
+        do Screen.drawCircle(x+3,y+3,1);
+        do Screen.drawCircle(x + 9,y + 3,1);
+        */
+        do Screen.drawRectangle(x,y,x+12,y+12);
+        do Screen.setColor(false);
+        do Screen.drawCircle(x+3,y+3,1);
+        do Screen.drawCircle(x+9,y+3,1);
+        do Screen.setColor(true);
+        return;
+    }
+
+    method boolean moveright(Terrain map)
+    {
+        if( ((x + 5) < 512) & (map.collision(x+12+5,y))  & (dir = 0))
+        {    
+            do Screen.setColor(false);
+            do draw();
+            do Screen.setColor(true);
+            let x = x + 5;
+            do draw();
+            return true;
+        }
+        return false;
+    }
+
+    method boolean moveleft(Terrain map)
+    {
+        if( ((x - 5) > -1) & (map.collision(x-12-5,y)) & (map.collision(x-5,y)) & (dir = 1))
+        {
+            do Screen.setColor(false);
+            do draw();
+            do Screen.setColor(true);
+            let x = x - 5;
+            do draw();
+            return true;
+        }
+        return false;
+    }
+
+    method boolean moveup(Terrain map)
+    {
+        if( ((y - 5) > -1) & (map.collision(x,y-5)) & (map.collision(x+12,y-5)) &(map.collision(x+12,y-8)) & (map.collision(x,y-8)) & (dir = 3))
+        {
+            do Screen.setColor(false);
+            do draw();
+            do Screen.setColor(true);
+            let y = y - 5;
+            do draw();
+            return true;
+        }
+        return false;
+    }
+
+    method boolean movedown(Terrain map)
+    {
+        if( ((y + 5) < 256) & (map.collision(x+5,y+13+5)) & (map.collision(x+5,y+12)) & (map.collision(x+5,y+8+5)) & (dir = 2))
+        {
+            do Screen.setColor(false);
+            do draw();
+            do Screen.setColor(true);
+            let y = y + 5;
+            do draw();
+            return true;
+        }
+        return false;
+    }
+    
+    method void move(Terrain map,Point p,Pacman user)
+    {
+        if(dir = 0)
+        {
+            if(moveright(map))
+            {
+                do p.eaten(x+5+12,y,2,user);
+                do p.eaten(x+5,y,2,user);
+                return;
+            }
+            else
+            {
+                do p.eaten(x,y,2,user);
+                do change();
+                do p.eaten(x,y,2,user);
+                return;
+            }
+        }
+        if(dir = 1)
+        {
+            if(moveleft(map))
+            {
+                do p.eaten(x-5-12,y,2,user);
+                do p.eaten(x-5,y,2,user);
+                return;
+            }
+            else
+            {
+                do p.eaten(x,y,2,user);
+                do change();
+                do p.eaten(x,y,2,user);
+                return;
+            }
+        }
+        if(dir = 2)
+        {
+            if(movedown(map))
+            {
+                do p.eaten(x,y+5+12,2,user);
+                do p.eaten(x,y+5,2,user);
+                return;
+            }
+            else
+            {
+                do p.eaten(x,y,2,user);
+                do change();
+                do p.eaten(x,y,2,user);
+                return;
+            }
+        }
+        if(dir = 3)
+        {
+            if(moveup(map))
+            {
+                do p.eaten(x,y-5-12,2,user);
+                do p.eaten(x,y-5,2,user);
+                return;
+            }
+            else
+            {
+                do p.eaten(x,y,2,user);
+                do change();
+                do p.eaten(x,y,2,user);
+                return;
+            }
+        }
+        return;
+    }
+    method boolean eat(Pacman user)
+    {
+        
+        if( (~user.getPower()) & (user.get_x() > (x - 5)) & (user.get_x() < (x+5)) & (user.get_y() > (y - 5)) & (user.get_y() < (y + 5)) )
+        {
+            return true;    
+        }
+        if( (user.getPower()) & (user.get_x() > (x - 5)) & (user.get_x() < (x+5)) & (user.get_y() > (y - 5)) & (user.get_y() < (y + 5)) )
+        {
+            let exists = false;
+            return false;
+        }
+        return false;
+    }
+    method boolean end(Pacman user)
+    {
+        
+        if((x < (user.get_x() + user.get_size())) & (x > user.get_x()) & (y < (user.get_y() + user.get_size())) & (y > user.get_y()) )
+        {
+            return true;    
+        }
+        return false;
+    }
+    
+
+    method void change()
+    {
+        let dir = ran.randRange(3);
+        do ran.addCallTime(10);
+        return;
+    }
+
+    method void checkEat(Point p,Pacman user)
+    {
+        do p.eaten(x,y,2,user);
+        do p.eaten(x-1,y+1,2,user);
+        do p.eaten(x-1,y-1,2,user);
+        do p.eaten(x-2,y-2,2,user);
+        do p.eaten(x-2,y+15,2,user);
+        do p.eaten(x+12,y+12,2,user);
+        do p.eaten(x+7,y+7,2,user);
+        do p.eaten(x+3,y+3,2,user);
+        do p.eaten(x+12,y-12,2,user);
+        do p.eaten(x+7,y-7,2,user);
+        do p.eaten(x+3,y-3,2,user);
+        do p.eaten(x-12,y+12,2,user);
+        do p.eaten(x-7,y+7,2,user);
+        do p.eaten(x-3,y+3,2,user);
+        do p.eaten(x-12,y-12,2,user);
+        do p.eaten(x-7,y-7,2,user);
+        do p.eaten(x-3,y-3,2,user);
+        do p.eaten(x-12,y+6,2,user);
+        do p.eaten(x+12,y+6,2,user);
+        do p.eaten(x,y+6,2,user);
+        return;
+    }
+    method boolean getExists(){
+        return exists;
+    }
+}

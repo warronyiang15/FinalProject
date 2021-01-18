@@ -1,0 +1,219 @@
+class Game{
+    field Array g; // for ghost
+    field Terrain map;
+    field boolean win;
+    field Pacman user;
+    field boolean lose;
+    field Point point;
+    constructor Game new()
+    {
+        var int i;
+        var int posx,posy;
+        var Ghost ghost;
+        let g = Array.new(4);
+        let point = Point.new();
+        let g[0] = Ghost.new(60,50);
+        let g[1] = Ghost.new(372,30);
+        let g[2] = Ghost.new(50,128);
+        let g[3] = Ghost.new(256,100);
+        let user = Pacman.new(128,240,5);
+        
+        let win = false;
+        let lose = false;
+        return this;
+    }
+    method void Game()
+    {
+        var int i;
+        var Ghost ghost;
+        var int x;
+        var int y;
+        do map.draw();
+        do point.draw();
+        while((~win) & (~lose))
+        {
+            let i = 0;
+            while(i < 4)
+            {
+                let ghost = g[i];
+                if(ghost.getExists())
+                {
+                    do ghost.checkEat(point,user);
+                    do ghost.move(map,point,user);
+                    do ghost.checkEat(point,user);
+                    if(ghost.eat(user))
+                    {
+                        let lose = true;
+                    }
+                    do ghost.checkEat(point,user);
+                }
+                let i = i + 1;
+            }
+            do user.move(map);
+            do user.checkEat(point);
+            //do Output.printInt(point.get_left());
+            //do Output.printString(" ");
+            if(point.winGame())
+            {
+                let win = true;
+            }
+        }
+        if(win)
+        {
+            do Output.printString("Win Game!");
+        }
+        if(lose)
+        {
+            do loseGame();
+        }
+        return;
+    }
+
+    method void loseGame()
+    {
+        do Screen.setColor(false);
+        do Screen.drawRectangle(0,0,511,5); 
+        do Sys.wait(1000);
+        do Screen.drawRectangle(250,0,260,30);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(0,0,5,70); 
+        do Sys.wait(1000);
+        do Screen.drawRectangle(0,70,50,75);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(50,70,55,110);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(0,105,55,110);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(0,145,55,150);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(50,145,55,180);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(0,175,55,180);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(0,175,5,250);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(0,250,511,255);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(505,0,511,70);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(505-55,70,511,76);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(505-55,70,505-50,110);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(505-55,105,511,110);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(505-55,145,511,150);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(505-55,145,505-50,175);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(505-55,175,511,180);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(505,180,511,255);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(30,20,60,30);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(30,45,60,55);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(80,20,130,30);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(80,45,90,110);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(80,45+30,130,45+40);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(80,145,90,180);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(80,200,130,210);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(30,200,60,210);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(55,200,65,235);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(130,50,370,60); 
+        do Sys.wait(1000);
+        do Screen.drawRectangle(450,20,480,30);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(450,45,480,55);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(370,20,420,30);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(410,45,420,110);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(370,45+30,420,45+40);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(410,145,420,180);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(370,200,420,210);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(440,200,480,210);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(370,200,380,235);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(170,150,320,160);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(170,80,220,90);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(270,80,320,90);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(170,80,180,160);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(310,80,320,160);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(170,180,320,190);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(210,180,220,230);
+        do Sys.wait(1000);
+        do Screen.drawRectangle(270,180,280,230);
+        do Sys.wait(1000);
+        do Screen.clearScreen();
+        do Output.println();
+        do Output.println();
+        do Output.println();
+        do Output.printString("                You Lose :<                 ");
+        do Output.println();
+        do Output.printString("                Try Hard :D                 ");
+        do Output.println();
+        do Output.println();
+        do Output.println();
+        return;
+    }
+/*
+    method void winGame()
+    {
+        var int i,count;
+        var boolean endd;
+        let user = Pacman.new(150,128,50);
+        let endd = false;
+        let count = 0;
+        do user.moveEnd();
+
+        
+        while(~endd)
+        {
+            let endd = true;
+            let i = 0;
+            while(i < 4)
+            {
+                let ghost = g[i];
+                do ghost.move(map);
+                let i = i + 1;
+                let k = k + 1;
+                if(k = 50)
+                {
+                    let k = 0;
+                    do ghost.change();
+                }
+                if(ghost.end(user))
+                {
+                    do Output.printString("Elimated");
+                    do Output.println();
+                    let count = count + 1;
+                }
+                
+            }
+            do user.moveEnd;
+        }
+        return;
+    }
+    */
+    
+}

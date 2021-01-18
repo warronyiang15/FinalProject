@@ -1,0 +1,291 @@
+class Terrain{
+    method void draw(){
+        //draw enviroments
+        var int x,y;
+        do Screen.drawRectangle(0,0,511,5); 
+        do Screen.drawRectangle(250,0,260,30);
+        do Screen.drawRectangle(0,0,5,70); 
+        do Screen.drawRectangle(0,70,50,75);
+        do Screen.drawRectangle(50,70,55,110);
+        do Screen.drawRectangle(0,105,55,110);
+        do Screen.drawRectangle(0,145,55,150);
+        do Screen.drawRectangle(50,145,55,180);
+        do Screen.drawRectangle(0,175,55,180);
+        do Screen.drawRectangle(0,175,5,250);
+        do Screen.drawRectangle(0,250,511,255);
+        do Screen.drawRectangle(505,0,511,70);
+        do Screen.drawRectangle(505-55,70,511,76);
+        do Screen.drawRectangle(505-55,70,505-50,110);
+        do Screen.drawRectangle(505-55,105,511,110);
+        do Screen.drawRectangle(505-55,145,511,150);
+        do Screen.drawRectangle(505-55,145,505-50,175);
+        do Screen.drawRectangle(505-55,175,511,180);
+        do Screen.drawRectangle(505,180,511,255);
+        do Screen.drawRectangle(30,20,60,30);
+        do Screen.drawRectangle(30,45,60,55);
+        do Screen.drawRectangle(80,20,130,30);
+        do Screen.drawRectangle(80,45,90,110);
+        do Screen.drawRectangle(80,45+30,130,45+40);
+        do Screen.drawRectangle(80,145,90,180);
+        do Screen.drawRectangle(80,200,130,210);
+        do Screen.drawRectangle(30,200,60,210);
+        do Screen.drawRectangle(55,200,65,235);
+        do Screen.drawRectangle(130,50,370,60); 
+        do Screen.drawRectangle(450,20,480,30);
+        do Screen.drawRectangle(450,45,480,55);
+        do Screen.drawRectangle(370,20,420,30);
+        do Screen.drawRectangle(410,45,420,110);
+        do Screen.drawRectangle(370,45+30,420,45+40);
+        do Screen.drawRectangle(410,145,420,180);
+        do Screen.drawRectangle(370,200,420,210);
+        do Screen.drawRectangle(440,200,480,210);
+        do Screen.drawRectangle(370,200,380,235);
+        do Screen.drawRectangle(170,150,320,160);
+        do Screen.drawRectangle(170,80,220,90);
+        do Screen.drawRectangle(270,80,320,90);
+        do Screen.drawRectangle(170,80,180,160);
+        do Screen.drawRectangle(310,80,320,160);
+        do Screen.drawRectangle(170,180,320,190);
+        do Screen.drawRectangle(210,180,220,230);
+        do Screen.drawRectangle(270,180,280,230);
+        return; 
+    }
+    
+    method boolean collision(int x,int y)
+    {
+        if( (x > (0)) & (x < (511)) & (y > (0)) & (y < (5)) )
+        {
+            //do Output.printInt(0);
+            return false;
+        }
+        if( (x > (250)) & (x < (260)) & (y > (0)) & (y < (30)) )
+        {
+            //do Output.printInt(1);
+            return false;
+        }
+        if( (x > (0)) & (x < (5)) & (y > (0)) & (y < (70)) )
+        {
+            //do Output.printInt(2);
+            return false;
+        }
+        if( (x > (0)) & (x < (50)) & (y > (70)) & (y < (75)) )
+        {
+            //do Output.printInt(3);
+            return false;
+        }
+        if( (x > (50)) & (x < (55)) & (y > (70)) & (y < (110)) )
+        {
+            //do Output.printInt(4);
+            return false;
+        }
+        if( (x > (0)) & (x < (55)) & (y > (105)) & (y < (110)) )
+        {
+            //do Output.printInt(5);
+            return false;
+        }
+        if( (x > (0)) & (x < (55)) & (y > (145)) & (y < (150)) )
+        {
+            //do Output.printInt(6);
+            return false;
+        }
+        if( (x > (50)) & (x < (55)) & (y > (145)) & (y < (180)) )
+        {
+            //do Output.printInt(7);
+            return false;
+        }
+        if( (x > (0)) & (x < (55)) & (y > (175)) & (y < (180)) )
+        {
+            //do Output.printInt(8);
+            return false;
+        }
+        if( (x > (0)) & (x < (5)) & (y > (175)) & (y < (250)) )
+        {
+            //do Output.printInt(9);
+            return false;
+        }
+        if( (x > (0)) & (x < (511)) & (y > (250)) & (y < (255)) )
+        {
+            //do Output.printInt(10);
+            return false;
+        }
+        if( (x > (505)) & (x < (511)) & (y > (0)) & (y < (70)) )
+        {
+            //do Output.printInt(11);
+            return false;
+        }
+        if( (x > (505-55)) & (x < (511)) & (y > (70)) & (y < (76)) )
+        {
+            //do Output.printInt(12);
+            return false;
+        }
+        if( (x > (505-55)) & (x < (505-50)) & (y > (70)) & (y < (110)) )
+        {
+            //do Output.printInt(13);
+            return false;
+        }
+        if( (x > (505-55)) & (x < (511)) & (y > (110)) & (y < (115)) )
+        {
+            //do Output.printInt(14);
+            return false;
+        }
+        if( (x > (505-55)) & (x < (511)) & (y > (145)) & (y < (150)) )
+        {
+            //do Output.printInt(15);
+            return false;
+        }
+        if( (x > (505-55)) & (x < (505-50)) & (y > (145)) & (y < (175)) )
+        {
+            //do Output.printInt(16);
+            return false;
+        }
+        if( (x > (505-55)) & (x < (511)) & (y > (175)) & (y < (180)) )
+        {
+            //do Output.printInt(17);
+            return false;
+        }
+        if( (x > (505)) & (x < (511)) & (y > (180)) & (y < (255)) )
+        {
+            //do Output.printInt(18);
+            return false;
+        }
+        if( (x > (30)) & (x < (60)) & (y > (20)) & (y < (30)) )
+        {
+            //do Output.printInt(19);
+            return false;
+        }
+        if( (x > (30)) & (x < (60)) & (y > (45)) & (y < (55)) )
+        {
+            //do Output.printInt(20);
+            return false;
+        }
+        if( (x > (80)) & (x < (130)) & (y > (20)) & (y < (30)) )
+        {
+            //do Output.printInt(21);
+            return false;
+        }
+        if( (x > (80)) & (x < (90)) & (y > (45)) & (y < (110)) )
+        {
+            //do Output.printInt(22);
+            return false;
+        }
+        if( (x > (80)) & (x < (130)) & (y > (45+30)) & (y < (45+40)) )
+        {
+            //do Output.printInt(23);
+            return false;
+        }
+        if( (x > (80)) & (x < (90)) & (y > (145)) & (y < (180)) )
+        {
+            //do Output.printInt(24);
+            return false;
+        }
+        if( (x > (80)) & (x < (130)) & (y > (200)) & (y < (210)) )
+        {
+            //do Output.printInt(25);
+            return false;
+        }
+        if( (x > (30)) & (x < (60)) & (y > (200)) & (y < (210)) )
+        {
+            //do Output.printInt(26);
+            return false;
+        }
+        if( (x > (55)) & (x < (65)) & (y > (200)) & (y < (235)) )
+        {
+            //do Output.printInt(27);
+            return false;
+        }
+        if( (x > (130)) & (x < (370)) & (y > (50)) & (y < (60)) )
+        {
+            //do Output.printInt(28);
+            return false;
+        }
+        if( (x > (450)) & (x < (480)) & (y > (20)) & (y < (30)) )
+        {
+            //do Output.printInt(29);
+            return false;
+        }
+        if( (x > (450)) & (x < (480)) & (y > (45)) & (y < (55)) )
+        {
+            //do Output.printInt(30);
+            return false;
+        }
+        if( (x > (370)) & (x < (420)) & (y > (20)) & (y < (30)) )
+        {
+            //do Output.printInt(31);
+            return false;
+        }
+        if( (x > (410)) & (x < (420)) & (y > (45)) & (y < (110)) )
+        {
+            //do Output.printInt(32);
+            return false;
+        }
+        if( (x > (370)) & (x < (420)) & (y > (45+30)) & (y < (45+40)) )
+        {
+            //do Output.printInt(33);
+            return false;
+        }
+        if( (x > (410)) & (x < (420)) & (y > (145)) & (y < (180)) )
+        {
+            //do Output.printInt(34);
+            return false;
+        }
+        if( (x > (370)) & (x < (420)) & (y > (200)) & (y < (210)) )
+        {
+            //do Output.printInt(35);
+            return false;
+        }
+        if( (x > (440)) & (x < (480)) & (y > (200)) & (y < (210)) )
+        {
+            //do Output.printInt(36);
+            return false;
+        }
+        if( (x > (370)) & (x < (380)) & (y > (200)) & (y < (235)) )
+        {
+            //do Output.printInt(37);
+            return false;
+        }
+        if( (x > (170)) & (x < (320)) & (y > (150)) & (y < (160)) )
+        {
+            //do Output.printInt(38);
+            return false;
+        }
+        if( (x > (170)) & (x < (220)) & (y > (80)) & (y < (90)) )
+        {
+            //do Output.printInt(39);
+            return false;
+        }
+        if( (x > (270)) & (x < (320)) & (y > (80)) & (y < (90)) )
+        {
+            //do Output.printInt(40);
+            return false;
+        }
+        if( (x > (170)) & (x < (180)) & (y > (80)) & (y < (160)) )
+        {
+            //do Output.printInt(41);
+            return false;
+        }
+        if( (x > (310)) & (x < (320)) & (y > (80)) & (y < (160)) )
+        {
+            //do Output.printInt(42);
+            return false;
+        }
+        if( (x > (170)) & (x < (320)) & (y > (180)) & (y < (190)) )
+        {
+            //do Output.printInt(43);
+            return false;
+        }
+        if( (x > (210)) & (x < (220)) & (y > (180)) & (y < (230)) )
+        {
+            //do Output.printInt(44);
+            return false;
+        }
+        if( (x > (270)) & (x < (280)) & (y > (180)) & (y < (230)) )
+        {
+            //do Output.printInt(45);
+            return false;
+        }
+
+        return true;
+    }
+
+    //size = 5 Rectangle
+}

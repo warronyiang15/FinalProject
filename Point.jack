@@ -1,0 +1,2631 @@
+class Point{
+    field int left;
+    field Array id;
+    constructor Point new(){
+        var int i;
+        let left = 171; // total points needed to be eaten
+        let id = Array.new(171);
+        let i = 0;
+        while(i < 171)
+        {
+            let id[i] = true;
+            let i = i + 1;
+        }
+        return this;
+    }
+    method void draw(){
+        var int x,y;
+        //draw point?
+        //first row------start // 23 points
+        do Screen.drawCircle(15,14,7); // power cookies
+        do Screen.drawCircle(32,12,3);
+        do Screen.drawCircle(52,12,3);
+        do Screen.drawCircle(72,12,3);
+        do Screen.drawCircle(92,12,3);
+        do Screen.drawCircle(112,12,3);
+        do Screen.drawCircle(132,12,3);
+        do Screen.drawCircle(152,12,3);
+        do Screen.drawCircle(172,12,3);
+        do Screen.drawCircle(192,12,3);
+        do Screen.drawCircle(212,12,3);
+        do Screen.drawCircle(232,12,3);
+        do Screen.drawCircle(282,12,3);
+        do Screen.drawCircle(302,12,3);
+        do Screen.drawCircle(322,12,3);
+        do Screen.drawCircle(342,12,3);
+        do Screen.drawCircle(362,12,3);
+        do Screen.drawCircle(382,12,3);
+        do Screen.drawCircle(402,12,3);
+        do Screen.drawCircle(422,12,3);
+        do Screen.drawCircle(442,12,3);
+        do Screen.drawCircle(462,12,3);
+        do Screen.drawCircle(492,14,7);
+        //first row------end
+        //second row-------start // 23 points
+        do Screen.drawCircle(15,37,3);
+        do Screen.drawCircle(32,37,3);
+        do Screen.drawCircle(52,37,3);
+        do Screen.drawCircle(72,37,3);
+        do Screen.drawCircle(92,37,3);
+        do Screen.drawCircle(112,37,3);
+        do Screen.drawCircle(132,37,3);
+        do Screen.drawCircle(152,37,3);
+        do Screen.drawCircle(172,37,3);
+        do Screen.drawCircle(192,37,3);
+        do Screen.drawCircle(212,37,3);
+        do Screen.drawCircle(232,37,3);
+        do Screen.drawCircle(282,37,3);
+        do Screen.drawCircle(302,37,3);
+        do Screen.drawCircle(322,37,3);
+        do Screen.drawCircle(342,37,3);
+        do Screen.drawCircle(362,37,3);
+        do Screen.drawCircle(382,37,3);
+        do Screen.drawCircle(402,37,3);
+        do Screen.drawCircle(422,37,3);
+        do Screen.drawCircle(442,37,3);
+        do Screen.drawCircle(462,37,3);
+        do Screen.drawCircle(482,37,3);
+        //second row-------end
+        //third row------start // 23 points
+        do Screen.drawCircle(15,62,3);
+        do Screen.drawCircle(32,62,3);
+        do Screen.drawCircle(52,62,3);
+        do Screen.drawCircle(72,62,3);
+        do Screen.drawCircle(102,67,3);
+        do Screen.drawCircle(122,67,3);
+        do Screen.drawCircle(142,67,3);
+        do Screen.drawCircle(162,67,3);
+        do Screen.drawCircle(182,67,3);
+        do Screen.drawCircle(202,67,3);
+        do Screen.drawCircle(222,67,3);
+        do Screen.drawCircle(242,67,3);
+        do Screen.drawCircle(262,67,3);
+        do Screen.drawCircle(282,67,3);
+        do Screen.drawCircle(302,67,3);
+        do Screen.drawCircle(322,67,3);
+        do Screen.drawCircle(342,67,3);
+        do Screen.drawCircle(362,67,3);
+        do Screen.drawCircle(382,67,3);
+        do Screen.drawCircle(400,67,3);
+        do Screen.drawCircle(440,62,3);
+        do Screen.drawCircle(460,62,3);
+        do Screen.drawCircle(480,62,3);
+        //third row-------end
+        //forth row------start // 1 points
+        do Screen.drawCircle(70,82,3); 
+        //end
+        //fifth row // 16 points
+        do Screen.drawCircle(70,102,7);
+        do Screen.drawCircle(102,102,3);
+        do Screen.drawCircle(122,102,3);
+        do Screen.drawCircle(142,102,3);
+        do Screen.drawCircle(162,102,3);
+        do Screen.drawCircle(192,102,3);
+        do Screen.drawCircle(212,102,3);
+        do Screen.drawCircle(232,102,3);
+        do Screen.drawCircle(252,102,3);
+        do Screen.drawCircle(272,102,3);
+        do Screen.drawCircle(292,102,3);
+        do Screen.drawCircle(332,102,3);
+        do Screen.drawCircle(352,102,3);
+        do Screen.drawCircle(372,102,3);
+        do Screen.drawCircle(392,102,3);
+        do Screen.drawCircle(432,102,3);
+        //end
+        //sixth row // 22 points
+        do Screen.drawCircle(15,130,3);
+        do Screen.drawCircle(32,130,3);
+        do Screen.drawCircle(52,130,3);
+        do Screen.drawCircle(72,130,3);
+        do Screen.drawCircle(92,130,3);
+        do Screen.drawCircle(112,130,3);
+        do Screen.drawCircle(132,130,3);
+        do Screen.drawCircle(152,130,3);
+        do Screen.drawCircle(192,130,3);
+        do Screen.drawCircle(212,130,3);
+        do Screen.drawCircle(232,130,3);
+        do Screen.drawCircle(252,130,3);
+        do Screen.drawCircle(272,130,3);
+        do Screen.drawCircle(292,130,3);
+        do Screen.drawCircle(332,130,3);
+        do Screen.drawCircle(352,130,3);
+        do Screen.drawCircle(372,130,3);
+        do Screen.drawCircle(392,130,3);
+        do Screen.drawCircle(412,130,3);
+        do Screen.drawCircle(432,130,3);
+        do Screen.drawCircle(452,130,3);
+        do Screen.drawCircle(472,130,3);
+        do Screen.drawCircle(492,130,7);
+        //end
+        //seventh row // 17 points
+        do Screen.drawCircle(68,170,3);
+        do Screen.drawCircle(102,170,3);
+        do Screen.drawCircle(122,170,3);
+        do Screen.drawCircle(142,170,3);
+        do Screen.drawCircle(162,170,3);
+        do Screen.drawCircle(182,170,3);
+        do Screen.drawCircle(202,170,3);
+        do Screen.drawCircle(222,170,3);
+        do Screen.drawCircle(242,170,3);
+        do Screen.drawCircle(262,170,7);
+        do Screen.drawCircle(282,170,3);
+        do Screen.drawCircle(302,170,3);
+        do Screen.drawCircle(322,170,3);
+        do Screen.drawCircle(342,170,3);
+        do Screen.drawCircle(362,170,3);
+        do Screen.drawCircle(382,170,3);
+        do Screen.drawCircle(402,170,3);
+        do Screen.drawCircle(432,170,3);
+        //end
+        //eighth row // 22 points
+        do Screen.drawCircle(15,190,3);
+        do Screen.drawCircle(32,190,3);
+        do Screen.drawCircle(52,190,3);
+        do Screen.drawCircle(72,190,3);
+        do Screen.drawCircle(92,190,3);
+        do Screen.drawCircle(112,190,3);
+        do Screen.drawCircle(132,190,3);
+        do Screen.drawCircle(152,190,3);
+        do Screen.drawCircle(172,200,3);
+        do Screen.drawCircle(192,200,3);
+        do Screen.drawCircle(232,200,3);
+        do Screen.drawCircle(252,200,3);
+        do Screen.drawCircle(292,200,3);
+        do Screen.drawCircle(312,200,3);
+        do Screen.drawCircle(332,200,3);
+        do Screen.drawCircle(352,200,3);
+        do Screen.drawCircle(372,190,3);
+        do Screen.drawCircle(392,190,3);
+        do Screen.drawCircle(412,190,3);
+        do Screen.drawCircle(432,190,3);
+        do Screen.drawCircle(452,190,3);
+        do Screen.drawCircle(472,190,3);
+        do Screen.drawCircle(492,190,3);
+        //end
+        //nineth row // 20 points
+        do Screen.drawCircle(15,220,3);
+        do Screen.drawCircle(32,220,3);
+        do Screen.drawCircle(72,220,3);
+        do Screen.drawCircle(92,220,3);
+        do Screen.drawCircle(112,220,3);
+        do Screen.drawCircle(132,220,3);
+        do Screen.drawCircle(152,220,3);
+        do Screen.drawCircle(172,220,3);
+        do Screen.drawCircle(192,220,3);
+        do Screen.drawCircle(232,220,3);
+        do Screen.drawCircle(252,220,3);
+        do Screen.drawCircle(292,220,3);
+        do Screen.drawCircle(312,220,3);
+        do Screen.drawCircle(332,220,3);
+        do Screen.drawCircle(352,220,3);
+        do Screen.drawCircle(392,220,3);
+        do Screen.drawCircle(412,220,3);
+        do Screen.drawCircle(432,220,3);
+        do Screen.drawCircle(452,220,3);
+        do Screen.drawCircle(472,220,3);
+        do Screen.drawCircle(492,220,3);
+        //end
+        return; 
+    }
+    method void eaten(int x,int y,int mode,Pacman user) // mode = 1 --> user .... mode = 2 --> ghost
+    {
+        if( (id[0]) & (x > (15 - 7)) & (x < (15 + 7)) & (y > (14 - 7)) & (y < (14 + 7)) )
+        {
+            if(mode = 1)
+            {
+                do user.setPowerUps();
+                let id[0] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(15,14,7);
+            }
+            return;
+        }
+        if( (id[1]) & (x > (32 - 3)) & (x < (32 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[1] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(32,12,3);
+            }
+            return;
+        }
+        if( (id[2]) & (x > (52 - 3)) & (x < (52 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[2] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(52,12,3);
+            }
+            return;
+        }
+        if( (id[3]) & (x > (72 - 3)) & (x < (72 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[3] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(72,12,3);
+            }
+            return;
+        }
+        if( (id[4]) & (x > (92 - 3)) & (x < (92 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[4] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(92,12,3);
+            }
+            return;
+        }
+        if( (id[5]) & (x > (112 - 3)) & (x < (112 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[5] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(112,12,3);
+            }
+            return;
+        }
+        if( (id[6]) & (x > (132 - 3)) & (x < (132 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[6] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(132,12,3);
+            }
+            return;
+        }
+        if( (id[7]) & (x > (152 - 3)) & (x < (152 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[7] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(152,12,3);
+            }
+            return;
+        }
+        if( (id[8]) & (x > (172 - 3)) & (x < (172 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[8] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(172,12,3);
+            }
+            return;
+        }
+        if( (id[9]) & (x > (192 - 3)) & (x < (192 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[9] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(192,12,3);
+            }
+            return;
+        }
+        if( (id[10]) & (x > (212 - 3)) & (x < (212 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[10] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(212,12,3);
+            }
+            return;
+        }
+        if( (id[11]) & (x > (232 - 3)) & (x < (232 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[11] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(232,12,3);
+            }
+            return;
+        }
+        if( (id[12]) & (x > (282 - 3)) & (x < (282 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[12] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(282,12,3);
+            }
+            return;
+        }
+        if( (id[13]) & (x > (302 - 3)) & (x < (302 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[13] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(302,12,3);
+            }
+            return;
+        }
+        if( (id[14]) & (x > (322 - 3)) & (x < (322 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[14] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(322,12,3);
+            }
+            return;
+        }
+        if( (id[15]) & (x > (342 - 3)) & (x < (342 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[15] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(342,12,3);
+            }
+            return;
+        }
+        if( (id[16]) & (x > (362 - 3)) & (x < (362 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[16] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(362,12,3);
+            }
+            return;
+        }
+        if( (id[17]) & (x > (382 - 3)) & (x < (382 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[17] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(382,12,3);
+            }
+            return;
+        }
+        if( (id[18]) & (x > (402 - 3)) & (x < (402 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[18] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(402,12,3);
+            }
+            return;
+        }
+        if( (id[19]) & (x > (422 - 3)) & (x < (422 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[19] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(422,12,3);
+            }
+            return;
+        }
+        if( (id[20]) & (x > (442 - 3)) & (x < (442 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[20] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(442,12,3);
+            }
+            return;
+        }
+        if( (id[21]) & (x > (462 - 3)) & (x < (462 + 3)) & (y > (12 - 3)) & (y < (12 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[21] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(462,12,3);
+            }
+            return;
+        }
+        if( (id[22]) & (x > (492 - 7)) & (x < (492 + 7)) & (y > (14 - 7)) & (y < (14 + 7)) )
+        {
+            if(mode = 1)
+            {
+                let id[22] = false;
+                let left = left - 1;
+                do user.setPowerUps();
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(492,14,7);
+            }
+            return;
+        }
+        if( (id[23]) & (x > (15 - 3)) & (x < (15 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[23] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(15,37,3);
+            }
+            return;
+        }
+        if( (id[24]) & (x > (32 - 3)) & (x < (32 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[24] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(32,37,3);
+            }
+            return;
+        }
+        if( (id[25]) & (x > (52 - 3)) & (x < (52 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[25] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(52,37,3);
+            }
+            return;
+        }
+        if( (id[26]) & (x > (72 - 3)) & (x < (72 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[26] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(72,37,3);
+            }
+            return;
+        }
+        if( (id[27]) & (x > (92 - 3)) & (x < (92 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[27] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(92,37,3);
+            }
+            return;
+        }
+        if( (id[28]) & (x > (112 - 3)) & (x < (112 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[28] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(112,37,3);
+            }
+            return;
+        }
+        if( (id[29]) & (x > (132 - 3)) & (x < (132 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[29] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(132,37,3);
+            }
+            return;
+        }
+        if( (id[30]) & (x > (152 - 3)) & (x < (152 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[30] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(152,37,3);
+            }
+            return;
+        }
+        if( (id[31]) & (x > (172 - 3)) & (x < (172 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[31] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(172,37,3);
+            }
+            return;
+        }
+        if( (id[32]) & (x > (192 - 3)) & (x < (192 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[32] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(192,37,3);
+            }
+            return;
+        }
+        if( (id[33]) & (x > (212 - 3)) & (x < (212 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[33] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(212,37,3);
+            }
+            return;
+        }
+        if( (id[34]) & (x > (232 - 3)) & (x < (232 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[34] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(232,37,3);
+            }
+            return;
+        }
+        if( (id[35]) & (x > (282 - 3)) & (x < (282 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[35] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(282,37,3);
+            }
+            return;
+        }
+        if( (id[36]) & (x > (302 - 3)) & (x < (302 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[36] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(302,37,3);
+            }
+            return;
+        }
+        if( (id[37]) & (x > (322 - 3)) & (x < (322 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[37] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(322,37,3);
+            }
+            return;
+        }
+        if( (id[38]) & (x > (342 - 3)) & (x < (342 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[38] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(342,37,3);
+            }
+            return;
+        }
+        if( (id[39]) & (x > (362 - 3)) & (x < (362 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[39] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(362,37,3);
+            }
+            return;
+        }
+        if( (id[40]) & (x > (382 - 3)) & (x < (382 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[40] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(382,37,3);
+            }
+            return;
+        }
+        if( (id[41]) & (x > (402 - 3)) & (x < (402 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[41] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(402,37,3);
+            }
+            return;
+        }
+        if( (id[42]) & (x > (422 - 3)) & (x < (422 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[42] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(422,37,3);
+            }
+            return;
+        }
+        if( (id[43]) & (x > (442 - 3)) & (x < (442 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[43] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(442,37,3);
+            }
+            return;
+        }
+        if( (id[44]) & (x > (462 - 3)) & (x < (462 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[44] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(462,37,3);
+            }
+            return;
+        }
+        if( (id[45]) & (x > (482 - 3)) & (x < (482 + 3)) & (y > (37 - 3)) & (y < (37 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[45] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(482,37,3);
+            }
+            return;
+        }
+        if( (id[46]) & (x > (15 - 3)) & (x < (15 + 3)) & (y > (62 - 3)) & (y < (62 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[46] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(15,62,3);
+            }
+            return;
+        }
+        if( (id[47]) & (x > (32 - 3)) & (x < (32 + 3)) & (y > (62 - 3)) & (y < (62 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[47] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(32,62,3);
+            }
+            return;
+        }
+        if( (id[48]) & (x > (52 - 3)) & (x < (52 + 3)) & (y > (62 - 3)) & (y < (62 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[48] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(52,62,3);
+            }
+            return;
+        }
+        if( (id[49]) & (x > (72 - 3)) & (x < (72 + 3)) & (y > (62 - 3)) & (y < (62 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[49] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(72,62,3);
+            }
+            return;
+        }
+        if( (id[50]) & (x > (102 - 3)) & (x < (102 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[50] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(102,67,3);
+            }
+            return;
+        }
+        if( (id[51]) & (x > (122 - 3)) & (x < (122 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[51] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(122,67,3);
+            }
+            return;
+        }
+        if( (id[52]) & (x > (142 - 3)) & (x < (142 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[52] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(142,67,3);
+            }
+            return;
+        }
+        if( (id[53]) & (x > (162 - 3)) & (x < (162 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[53] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(162,67,3);
+            }
+            return;
+        }
+        if( (id[54]) & (x > (182 - 3)) & (x < (182 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[54] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(182,67,3);
+            }
+            return;
+        }
+        if( (id[55]) & (x > (202 - 3)) & (x < (202 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[55] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(202,67,3);
+            }
+            return;
+        }
+        if( (id[56]) & (x > (222 - 3)) & (x < (222 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[56] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(222,67,3);
+            }
+            return;
+        }
+        if( (id[57]) & (x > (242 - 3)) & (x < (242 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[57] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(242,67,3);
+            }
+            return;
+        }
+        if( (id[58]) & (x > (262 - 3)) & (x < (262 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[58] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(262,67,3);
+            }
+            return;
+        }
+        if( (id[59]) & (x > (282 - 3)) & (x < (282 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[59] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(282,67,3);
+            }
+            return;
+        }
+        if( (id[60]) & (x > (302 - 3)) & (x < (302 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[60] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(302,67,3);
+            }
+            return;
+        }
+        if( (id[61]) & (x > (322 - 3)) & (x < (322 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[61] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(322,67,3);
+            }
+            return;
+        }
+        if( (id[62]) & (x > (342 - 3)) & (x < (342 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[62] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(342,67,3);
+            }
+            return;
+        }
+        if( (id[63]) & (x > (362 - 3)) & (x < (362 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[63] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(362,67,3);
+            }
+            return;
+        }
+        if( (id[64]) & (x > (382 - 3)) & (x < (382 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[64] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(382,67,3);
+            }
+            return;
+        }
+        if( (id[65]) & (x > (400 - 3)) & (x < (400 + 3)) & (y > (67 - 3)) & (y < (67 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[65] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(400,67,3);
+            }
+            return;
+        }
+        if( (id[66]) & (x > (440 - 3)) & (x < (440 + 3)) & (y > (62 - 3)) & (y < (62 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[66] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(440,62,3);
+            }
+            return;
+        }
+        if( (id[67]) & (x > (460 - 3)) & (x < (460 + 3)) & (y > (62 - 3)) & (y < (62 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[67] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(460,62,3);
+            }
+            return;
+        }
+        if( (id[68]) & (x > (480 - 3)) & (x < (480 + 3)) & (y > (62 - 3)) & (y < (62 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[68] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(480,62,3);
+            }
+            return;
+        }
+        if( (id[69]) & (x > (70 - 3)) & (x < (70 + 3)) & (y > (82 - 3)) & (y < (82 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[69] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(70,82,3);
+            }
+            return;
+        }
+        if( (id[70]) & (x > (70 - 7)) & (x < (70 + 7)) & (y > (102 - 7)) & (y < (102 + 7)) )
+        {
+            if(mode = 1)
+            {
+                do user.setPowerUps();
+                let id[70] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(70,102,7);
+            }
+            return;
+        }
+        if( (id[71]) & (x > (102 - 3)) & (x < (102 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[71] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(102,102,3);
+            }
+            return;
+        }
+        if( (id[72]) & (x > (122 - 3)) & (x < (122 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[72] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(122,102,3);
+            }
+            return;
+        }
+        if( (id[73]) & (x > (142 - 3)) & (x < (142 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[73] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(142,102,3);
+            }
+            return;
+        }
+        if( (id[74]) & (x > (162 - 3)) & (x < (162 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[74] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(162,102,3);
+            }
+            return;
+        }
+        if( (id[75]) & (x > (192 - 3)) & (x < (192 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[75] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(192,102,3);
+            }
+            return;
+        }
+        if( (id[76]) & (x > (212 - 3)) & (x < (212 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[76] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(212,102,3);
+            }
+            return;
+        }
+        if( (id[77]) & (x > (232 - 3)) & (x < (232 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[77] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(232,102,3);
+            }
+            return;
+        }
+        if( (id[78]) & (x > (252 - 3)) & (x < (252 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[78] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(252,102,3);
+            }
+            return;
+        }
+        if( (id[79]) & (x > (272 - 3)) & (x < (272 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[79] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(272,102,3);
+            }
+            return;
+        }
+        if( (id[80]) & (x > (292 - 3)) & (x < (292 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[80] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(292,102,3);
+            }
+            return;
+        }
+        if( (id[81]) & (x > (332 - 3)) & (x < (332 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[81] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(332,102,3);
+            }
+            return;
+        }
+        if( (id[82]) & (x > (352 - 3)) & (x < (352 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[82] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(352,102,3);
+            }
+            return;
+        }
+        if( (id[83]) & (x > (372 - 3)) & (x < (372 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[83] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(372,102,3);
+            }
+            return;
+        }
+        if( (id[84]) & (x > (392 - 3)) & (x < (392 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[84] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(392,102,3);
+            }
+            return;
+        }
+        if( (id[85]) & (x > (432 - 3)) & (x < (432 + 3)) & (y > (102 - 3)) & (y < (102 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[85] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(432,102,3);
+            }
+            return;
+        }
+        if( (id[86]) & (x > (15 - 3)) & (x < (15 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[86] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(15,130,3);
+            }
+            return;
+        }
+        if( (id[87]) & (x > (32 - 3)) & (x < (32 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[87] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(32,130,3);
+            }
+            return;
+        }
+        if( (id[88]) & (x > (52 - 3)) & (x < (52 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[88] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(52,130,3);
+            }
+            return;
+        }
+        if( (id[89]) & (x > (72 - 3)) & (x < (72 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[89] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(72,130,3);
+            }
+            return;
+        }
+        if( (id[90]) & (x > (92 - 3)) & (x < (92 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[90] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(92,130,3);
+            }
+            return;
+        }
+        if( (id[91]) & (x > (112 - 3)) & (x < (112 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[91] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(112,130,3);
+            }
+            return;
+        }
+        if( (id[92]) & (x > (132 - 3)) & (x < (132 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[92] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(132,130,3);
+            }
+            return;
+        }
+        if( (id[93]) & (x > (152 - 3)) & (x < (152 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[93] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(152,130,3);
+            }
+            return;
+        }
+        if( (id[94]) & (x > (192 - 3)) & (x < (192 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[94] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(192,130,3);
+            }
+            return;
+        }
+        if( (id[95]) & (x > (212 - 3)) & (x < (212 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[95] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(212,130,3);
+            }
+            return;
+        }
+        if( (id[96]) & (x > (232 - 3)) & (x < (232 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[96] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(232,130,3);
+            }
+            return;
+        }
+        if( (id[97]) & (x > (252 - 3)) & (x < (252 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[97] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(252,130,3);
+            }
+            return;
+        }
+        if( (id[98]) & (x > (272 - 3)) & (x < (272 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[98] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(272,130,3);
+            }
+            return;
+        }
+        if( (id[99]) & (x > (292 - 3)) & (x < (292 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[99] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(292,130,3);
+            }
+            return;
+        }
+        if( (id[100]) & (x > (332 - 3)) & (x < (332 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[100] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(332,130,3);
+            }
+            return;
+        }
+        if( (id[101]) & (x > (352 - 3)) & (x < (352 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[101] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(352,130,3);
+            }
+            return;
+        }
+        if( (id[102]) & (x > (372 - 3)) & (x < (372 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[102] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(372,130,3);
+            }
+            return;
+        }
+        if( (id[103]) & (x > (392 - 3)) & (x < (392 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[103] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(392,130,3);
+            }
+            return;
+        }
+        if( (id[104]) & (x > (412 - 3)) & (x < (412 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[104] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(412,130,3);
+            }
+            return;
+        }
+        if( (id[105]) & (x > (432 - 3)) & (x < (432 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[105] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(432,130,3);
+            }
+            return;
+        }
+        if( (id[106]) & (x > (452 - 3)) & (x < (452 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[106] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(452,130,3);
+            }
+            return;
+        }
+        if( (id[107]) & (x > (472 - 3)) & (x < (472 + 3)) & (y > (130 - 3)) & (y < (130 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[107] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(472,130,3);
+            }
+            return;
+        }
+        if( (id[108]) & (x > (492 - 7)) & (x < (492 + 7)) & (y > (130 - 7)) & (y < (130 + 7)) )
+        {
+            if(mode = 1)
+            {
+                do user.setPowerUps();
+                let id[108] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(492,130,7);
+            }
+            return;
+        }
+        if( (id[109]) & (x > (68 - 3)) & (x < (68 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[109] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(68,170,3);
+            }
+            return;
+        }
+        if( (id[110]) & (x > (102 - 3)) & (x < (102 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[110] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(102,170,3);
+            }
+            return;
+        }
+        if( (id[111]) & (x > (122 - 3)) & (x < (122 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[111] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(122,170,3);
+            }
+            return;
+        }
+        if( (id[112]) & (x > (142 - 3)) & (x < (142 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[112] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(142,170,3);
+            }
+            return;
+        }
+        if( (id[113]) & (x > (162 - 3)) & (x < (162 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[113] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(162,170,3);
+            }
+            return;
+        }
+        if( (id[114]) & (x > (182 - 3)) & (x < (182 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[114] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(182,170,3);
+            }
+            return;
+        }
+        if( (id[115]) & (x > (202 - 3)) & (x < (202 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[115] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(202,170,3);
+            }
+            return;
+        }
+        if( (id[116]) & (x > (222 - 3)) & (x < (222 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[116] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(222,170,3);
+            }
+            return;
+        }
+        if( (id[117]) & (x > (242 - 3)) & (x < (242 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[117] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(242,170,3);
+            }
+            return;
+        }
+        if( (id[118]) & (x > (262 - 7)) & (x < (262 + 7)) & (y > (170 - 7)) & (y < (170 + 7)) )
+        {
+            if(mode = 1)
+            {
+                do user.setPowerUps();
+                let id[118] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(262,170,7);
+            }
+            return;
+        }
+        if( (id[119]) & (x > (282 - 3)) & (x < (282 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[119] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(282,170,3);
+            }
+            return;
+        }
+        if( (id[120]) & (x > (302 - 3)) & (x < (302 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[120] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(302,170,3);
+            }
+            return;
+        }
+        if( (id[121]) & (x > (322 - 3)) & (x < (322 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[121] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(322,170,3);
+            }
+            return;
+        }
+        if( (id[122]) & (x > (342 - 3)) & (x < (342 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[122] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(342,170,3);
+            }
+            return;
+        }
+        if( (id[123]) & (x > (362 - 3)) & (x < (362 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[123] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(362,170,3);
+            }
+            return;
+        }
+        if( (id[124]) & (x > (382 - 3)) & (x < (382 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[124] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(382,170,3);
+            }
+            return;
+        }
+        if( (id[125]) & (x > (402 - 3)) & (x < (402 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[125] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(402,170,3);
+            }
+            return;
+        }
+        if( (id[126]) & (x > (432 - 3)) & (x < (432 + 3)) & (y > (170 - 3)) & (y < (170 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[126] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(432,170,3);
+            }
+            return;
+        }
+        if( (id[127]) & (x > (15 - 3)) & (x < (15 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[127] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(15,190,3);
+            }
+            return;
+        }
+        if( (id[128]) & (x > (32 - 3)) & (x < (32 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[128] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(32,190,3);
+            }
+            return;
+        }
+        if( (id[129]) & (x > (52 - 3)) & (x < (52 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[129] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(52,190,3);
+            }
+            return;
+        }
+        if( (id[130]) & (x > (72 - 3)) & (x < (72 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[130] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(72,190,3);
+            }
+            return;
+        }
+        if( (id[131]) & (x > (92 - 3)) & (x < (92 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[131] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(92,190,3);
+            }
+            return;
+        }
+        if( (id[132]) & (x > (112 - 3)) & (x < (112 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[132] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(112,190,3);
+            }
+            return;
+        }
+        if( (id[133]) & (x > (132 - 3)) & (x < (132 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[133] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(132,190,3);
+            }
+            return;
+        }
+        if( (id[134]) & (x > (152 - 3)) & (x < (152 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[134] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(152,190,3);
+            }
+            return;
+        }
+        if( (id[135]) & (x > (172 - 3)) & (x < (172 + 3)) & (y > (200 - 3)) & (y < (200 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[135] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(172,200,3);
+            }
+            return;
+        }
+        if( (id[136]) & (x > (192 - 3)) & (x < (192 + 3)) & (y > (200 - 3)) & (y < (200 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[136] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(192,200,3);
+            }
+            return;
+        }
+        if( (id[137]) & (x > (232 - 3)) & (x < (232 + 3)) & (y > (200 - 3)) & (y < (200 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[137] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(232,200,3);
+            }
+            return;
+        }
+        if( (id[138]) & (x > (252 - 3)) & (x < (252 + 3)) & (y > (200 - 3)) & (y < (200 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[138] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(252,200,3);
+            }
+            return;
+        }
+        if( (id[139]) & (x > (292 - 3)) & (x < (292 + 3)) & (y > (200 - 3)) & (y < (200 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[139] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(292,200,3);
+            }
+            return;
+        }
+        if( (id[140]) & (x > (312 - 3)) & (x < (312 + 3)) & (y > (200 - 3)) & (y < (200 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[140] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(312,200,3);
+            }
+            return;
+        }
+        if( (id[141]) & (x > (332 - 3)) & (x < (332 + 3)) & (y > (200 - 3)) & (y < (200 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[141] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(332,200,3);
+            }
+            return;
+        }
+        if( (id[142]) & (x > (352 - 3)) & (x < (352 + 3)) & (y > (200 - 3)) & (y < (200 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[142] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(352,200,3);
+            }
+            return;
+        }
+        if( (id[143]) & (x > (372 - 3)) & (x < (372 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[143] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(372,190,3);
+            }
+            return;
+        }
+        if( (id[144]) & (x > (392 - 3)) & (x < (392 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[144] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(392,190,3);
+            }
+            return;
+        }
+        if( (id[145]) & (x > (412 - 3)) & (x < (412 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[145] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(412,190,3);
+            }
+            return;
+        }
+        if( (id[146]) & (x > (432 - 3)) & (x < (432 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[146] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(432,190,3);
+            }
+            return;
+        }
+        if( (id[147]) & (x > (452 - 3)) & (x < (452 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[147] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(452,190,3);
+            }
+            return;
+        }
+        if( (id[148]) & (x > (472 - 3)) & (x < (472 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[148] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(472,190,3);
+            }
+            return;
+        }
+        if( (id[149]) & (x > (492 - 3)) & (x < (492 + 3)) & (y > (190 - 3)) & (y < (190 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[149] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(492,190,3);
+            }
+            return;
+        }
+        if( (id[150]) & (x > (15 - 3)) & (x < (15 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[150] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(15,220,3);
+            }
+            return;
+        }
+        if( (id[151]) & (x > (32 - 3)) & (x < (32 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[151] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(32,220,3);
+            }
+            return;
+        }
+        if( (id[152]) & (x > (72 - 3)) & (x < (72 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[152] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(72,220,3);
+            }
+            return;
+        }
+        if( (id[153]) & (x > (92 - 3)) & (x < (92 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[153] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(92,220,3);
+            }
+            return;
+        }
+        if( (id[154]) & (x > (112 - 3)) & (x < (112 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[154] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(112,220,3);
+            }
+            return;
+        }
+        if( (id[155]) & (x > (132 - 3)) & (x < (132 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[155] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(132,220,3);
+            }
+            return;
+        }
+        if( (id[156]) & (x > (152 - 3)) & (x < (152 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[156] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(152,220,3);
+            }
+            return;
+        }
+        if( (id[157]) & (x > (172 - 3)) & (x < (172 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[157] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(172,220,3);
+            }
+            return;
+        }
+        if( (id[158]) & (x > (192 - 3)) & (x < (192 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[158] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(192,220,3);
+            }
+            return;
+        }
+        if( (id[159]) & (x > (232 - 3)) & (x < (232 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[159] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(232,220,3);
+            }
+            return;
+        }
+        if( (id[160]) & (x > (252 - 3)) & (x < (252 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[160] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(252,220,3);
+            }
+            return;
+        }
+        if( (id[161]) & (x > (292 - 3)) & (x < (292 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[161] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(292,220,3);
+            }
+            return;
+        }
+        if( (id[162]) & (x > (312 - 3)) & (x < (312 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[162] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(312,220,3);
+            }
+            return;
+        }
+        if( (id[163]) & (x > (332 - 3)) & (x < (332 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[163] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(332,220,3);
+            }
+            return;
+        }
+        if( (id[164]) & (x > (352 - 3)) & (x < (352 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[164] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(352,220,3);
+            }
+            return;
+        }
+        if( (id[165]) & (x > (392 - 3)) & (x < (392 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[165] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(392,220,3);
+            }
+            return;
+        }
+        if( (id[166]) & (x > (412 - 3)) & (x < (412 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[166] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(412,220,3);
+            }
+            return;
+        }
+        if( (id[167]) & (x > (432 - 3)) & (x < (432 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[167] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(432,220,3);
+            }
+            return;
+        }
+        if( (id[168]) & (x > (452 - 3)) & (x < (452 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[168] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(452,220,3);
+            }
+            return;
+        }
+        if( (id[169]) & (x > (472 - 3)) & (x < (472 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[169] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(472,220,3);
+            }
+            return;
+        }
+        if( (id[170]) & (x > (492 - 3)) & (x < (492 + 3)) & (y > (220 - 3)) & (y < (220 + 3)) )
+        {
+            if(mode = 1)
+            {
+                let id[170] = false;
+                let left = left - 1;
+            }
+            else
+            {
+                do Screen.setColor(true);
+                do Screen.drawCircle(492,220,3);
+            }
+            return;
+        }
+        return;
+    }
+
+    method boolean winGame(){
+        if(left < 1)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    method int get_left(){
+        return left;
+    }
+
+    method boolean checkArray(int i){
+        return id[i];
+    }
+
+
+}

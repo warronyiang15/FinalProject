@@ -1,0 +1,17 @@
+class Coordinate{
+    field int x,y;
+    constructor Coordinate new(int a,int b)
+    {
+        let x = a;
+        let y = b;
+        return this;
+    }
+    method int get_x()
+    {
+        return x;
+    }
+    method int get_y()
+    {
+        return y;
+    }
+}
